@@ -63,7 +63,7 @@ url = 'https://cataas.com/cat'
 tag_label = Label(text='Выбери тег')
 tag_label.pack()
 
-tag_combobox = ttk.Combobox(values=Allowed_tags)
+tag_combobox = ttk.Combobox(values=Allowed_tags)   #  комбобокс (открывающийся список) для выбора тегов
 tag_combobox.pack()
 
 load_button = Button(text='Загрузить по тегу', command=open_new_window)
