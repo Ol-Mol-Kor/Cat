@@ -1,13 +1,8 @@
-from webbrowser import open_new
 from tkinter import ttk
-from bottle import response
 from tkinter import *
 from PIL import Image, ImageTk
 import requests
 from io import BytesIO
-
-from gevent.testing.travis import command
-from pygame.display import update
 
 Allowed_tags = ['sleep', 'jump', 'smile', 'fight', 'black', 'white', 'siamese']
 
