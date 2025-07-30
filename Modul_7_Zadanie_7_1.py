@@ -64,24 +64,24 @@ main_frame = ttk.Frame(window)  # делаем рамку для компано�
 main_frame.pack(fill=BOTH, expand=True, padx=10, pady=10)
 
 # Настройка сетки
-main_frame.columnconfigure(0, weight=1)  # Первая колонка растягивается
-main_frame.columnconfigure(1, weight=1)  # Вторая колонка растягивается
-main_frame.rowconfigure(3, weight=1)     # Последняя строка растягивается
+# main_frame.columnconfigure(0, weight=1)  # Первая колонка растягивается
+# main_frame.columnconfigure(1, weight=1)  # Вторая колонка растягивается
+# main_frame.rowconfigure(1, weight=1)     # Последняя строка растягивается
 
-ttk.Label(main_frame, text='Выбери тег').grid(row=0, column=0, columnspan=2, sticky='w', pady=(0, 5))
+ttk.Label(main_frame, text='Выбери тег').grid(row=0, column=0, pady=5)
 # tag_label.pack()  - не нужен, так как используем grid
 
 tag_combobox = ttk.Combobox(main_frame, values=Allowed_tags)   #  комбобокс (открывающийся список) для выбора тегов
-tag_combobox.grid(row=1, column=0, columnspan=2, sticky='ew', pady=(0, 10))
+tag_combobox.grid(row=1, column=0, padx=5)
 # tag_combobox.pack()
 
+random_cat_button = ttk.Button(main_frame, text='Случайный котик', command=random_cat_in_new_window)
+random_cat_button.grid(row=1, column=1, padx=50, pady=5)
+
 load_button = ttk.Button(main_frame, text='Загрузить по тегу', command=open_new_window)
-load_button.grid(row=2, column=0, sticky='ew', padx=(0, 5), pady=5)
+load_button.grid(row=2, column=0, sticky='ew', pady=5)
 # load_button.pack()
 
-random_cat_button = ttk.Button(main_frame, text='Случайный котик', command=random_cat_in_new_window)
-random_cat_button.grid(row=2, column=1, sticky='ew', pady=5)
-# random_cat_button.pack()
 
 window.mainloop()
 
